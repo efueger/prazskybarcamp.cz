@@ -1,0 +1,10 @@
+name: PražskýBarcamp theme
+description: 'PražskýBarcamp theme'
+author: Vojta Svoboda
+code: Bootstrap 3 Sass Pro
+homepage: 'http://www.prazskybarcamp.cz'
+form: fields.yaml
+require:
+    - RainLab.User
+    - RainLab.Blog
+    - AnandPatel.WysiwygEditors

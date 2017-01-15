@@ -1,2 +1,3 @@
-# prazskybarcamp.cz
-Prague barcamp website
+# PrazskyBarcamp.cz
+
+www.prazskybarcamp.cz

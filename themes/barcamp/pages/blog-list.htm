@@ -1,0 +1,20 @@
+title = "Blog seznam"
+url = "/blog/:page?"
+layout = "default"
+is_hidden = 0
+
+[blogPosts]
+pageNumber = "{{ :page }}"
+categoryFilter = "{{ :category }}"
+postsPerPage = 3
+noPostsMessage = "No posts found"
+sortOrder = "published_at desc"
+categoryPage = "blog-category"
+postPage = "blog-detail"
+==
+<section class="section-intro">
+    <div class="container">
+        <h1>inspirujte se <span>blogem videem nebo fotkou</span></h1>
+        {% component 'blogPosts' %}
+    </div>
+</section>
