@@ -19,12 +19,12 @@ return [
     |--------------------------------------------------------------------------
     |
     | If you are developing with October, it is important to have the latest
-    | code base. Set this value to 'true' to tell the platform to download
+    | code base, set this value to 'true' to tell the platform to download
     | and use the development copies of core files and plugins.
     |
     */
 
-    'edgeUpdates' => false,
+    'edgeUpdates' => true,
 
     /*
     |--------------------------------------------------------------------------
@@ -62,7 +62,7 @@ return [
     |
     */
 
-    'backendTimezone' => 'UTC',
+    'backendTimezone' => 'Europe/Prague',
 
     /*
     |--------------------------------------------------------------------------
@@ -297,8 +297,8 @@ return [
     |--------------------------------------------------------------------------
     |
     | If safe mode is enabled, the PHP code section is disabled in the CMS
-    | for security reasons. If set to null, safe mode is enabled when
-    | debug mode (app.debug) is disabled.
+    | for security reasons. If set to null, safe mode is on when debug mode
+    | (app.debug) is disabled.
     |
     */
 
@@ -314,6 +314,6 @@ return [
     |
     */
 
-    'enableCsrfProtection' => false,
+    'enableCsrfProtection' => true,
 
 ];
