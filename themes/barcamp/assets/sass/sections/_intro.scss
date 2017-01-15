@@ -1,7 +1,7 @@
 .section-intro {
-    @extend %section;
+    @extend %section-negative;
 
-    h2 {
-        font-family: $font-lato;
+    a {
+        @extend %href-negative;
     }
 }
