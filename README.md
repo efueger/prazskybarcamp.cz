@@ -1,3 +1,38 @@
 # PrazskyBarcamp.cz
 
 www.prazskybarcamp.cz
+
+## Installation
+
+1. Create .env file as copy of .env.dist and fill each line. Don't forget to fill encryption key and cipher!
+2. Run `composer install`.
+3. Create file `/config/dev/app.php` with content `<?php return ['debug' => true];` to set up debug mode.
+4. Create database and run database migrations by `php artisan october:up`.
+
+## Run on localhost
+
+1. Run local server by `php artisan serve`. Project should works at `http://localhost:8000/`.
+2. Login to backend at `http://localhost:8000/backend` with admin/admin credentials.
+3. For developing theme check another readme file at theme folder.
+
+## Run on production
+
+1. Set environment to production at .env file (APP_ENV=production).
+2. Set Error Logger plugin at backend.
+3. Remove admin account and create own.
+4. Set mailing at Backend > Mail configuration.
+
+## Requirements
+
+- PHP 5.5.9.
+- MySQL 5.7.x or MariaDb.
+
+## Unit tests
+
+Just run `phpunit`.
+
+In case of "Class not found" error try to run `composer dump-autoload` for regenerate autoload files.
+
+## Contribution
+
+Feel free to send pull-request to the master branch.

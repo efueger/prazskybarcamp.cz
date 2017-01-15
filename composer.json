@@ -45,8 +45,13 @@
         ]
     },
     "scripts": {
-        "post-create-project-cmd": [
-            "php artisan key:generate"
+        "build": [
+            "@composer install --no-progress --no-interaction --no-suggest",
+            "@test"
+        ],
+        "test": [
+            "composer dumpautoload",
+            "phpunit"
         ]
     },
     "config": {
