@@ -50,8 +50,9 @@ Variables can be changed at Backend > CMS > Themes > Customize.
 
 ## Updating
 
-You can update theme dependencies by yourself, but it's not neccesary.
+For update dependencies:
 
+- install npm modules by `yarn` command at theme folder
 - update npm by `yarn update` or `npm update`
 - update assets by `bower update`
 

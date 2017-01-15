@@ -4,5 +4,5 @@ tabs:
             tab: General
             label: Title
             type: text
-            default: My Websites
+            default: Pražský Barcamp
             comment: Used at site title
