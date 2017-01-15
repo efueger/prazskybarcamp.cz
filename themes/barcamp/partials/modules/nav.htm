@@ -13,21 +13,14 @@
         <div class="collapse navbar-collapse navbar-main-collapse pull-left">
             <ul class="nav navbar-nav">
                 <li class="separator hidden-xs"></li>
-                <li class="{% if this.page.id == 'home' %}active{% endif %}"><a href="{{ 'home' | page }}">Domů</a></li>
+                <li class="{% if this.page.id == 'home' %}active{% endif %}"><a href="{{ 'home' | page }}">Home</a></li>
                 <li class="{% if this.page.id == 'blog-list' %}active{% endif %}"><a href="{{ 'blog-list' | page }}">Blog</a></li>
                 <li class="{% if this.page.url == '/kontakt' %}active{% endif %}"><a href="{{ 'kontakt' | staticPage }}">Kontakt</a></li>
             </ul>
         </div>
         <div class="collapse navbar-collapse navbar-account pull-right">
             <ul class="nav navbar-nav">
-                {% if user %}
-                <li><a href="{{ 'my-account' | page }}">Můj účet</a></li>
-                <li><a href="{{ 'my-account-update' | page }}">Nastavení</a></li>
-                <li><a data-request="onLogout" data-request-data="redirect: '/login'" class="a">Odhlásit se</a></li>
-                {% else %}
                 <li><a href="{{ 'registration' | page }}">Registrace</a></li>
-                <li><a href="{{ 'login' | page }}">Přihlášení</a></li>
-                {% endif %}
             </ul>
         </div>
     </div>

@@ -17,7 +17,7 @@ function onEnd() {
         $this['category_slug'] = $this['category']['attributes']['slug'];
 
     } else {
-        $this->page->title = "Post not found!";
+        $this->page->title = "Článek nenalezen!";
         header("HTTP/1.0 404 Not Found");
         flush();
     }
@@ -33,8 +33,8 @@ function onEnd() {
             {% component 'blogPost' %}
 
         {% else %}
-            <h1>Not found :-(</h1>
-            <p>Post not found. Please continue to <a href="{{ 'blog-list' | page }}">list of all posts</a>.</p>
+            <h1>Článek nebyl nalezen :-(</h1>
+            <p>Omlouváme se, ale takový článek jsme nenašli. pokračujte prosím na <a href="{{ 'blog-list' | page }}">seznam všech článků</a>.</p>
         {% endif %}
     </div>
 </section>

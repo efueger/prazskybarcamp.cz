@@ -1,4 +1,4 @@
-title = "Blog category"
+title = "Blogová kategorie"
 url = "/blog/category/:slug/:page?"
 layout = "default"
 is_hidden = 0
@@ -33,8 +33,8 @@ function onEnd()
             {% component 'blogPosts' %}
 
         {% else %}
-            <h1>Category not found :-(</h1>
-            <p>Category not found. Please continue to <a href="{{ 'blog-list' | page }}">list of all posts</a>.</p>
+            <h1>Kategorie nebyla nalezena :-(</h1>
+            <p>Omlouváme se, ale takovou kategorii jsme nenašli. Pokračujte prosím na <a href="{{ 'blog-list' | page }}">seznam všech článků</a>.</p>
         {% endif %}
     </div>
 </section>

@@ -1,24 +1,14 @@
-Bootstrap 3 Sass Pro
+PražskýBarcamp theme
 ====================
 
-Bootstrap 3 theme for OctoberCMS with [Sass](http://sass-lang.com/) support and other plugins integration.
-
-- Why another Bootstrap theme? -- This theme is build with Sass support.
-- Why [Bootstrap 3](http://getbootstrap.com/) and not Bootstrap 4? -- Because v3 is last stable and v4 is still alpha version.
+Bootstrap 3 theme for PrazskyBarcamp with [Sass](http://sass-lang.com/) support and other plugins integration.
 
 ## Features
 
-- **automatically compiling Sass files**
+- automatically compiling Sass files
 - dependencies managed by **[Yarn](https://yarnpkg.com/) and [Bower](https://bower.io/)**
 - [FontAwesome](http://fontawesome.io/) and [Font Lato](http://www.latofonts.com/lato-free-fonts/) included
 - theme config file prepared
-- **no other plugin dependency**
-
-## Extra features
-
-- RainLab.Blog integration (posts listing, post detail, post category, handle when page/category not found)
-- RainLab.User integration (login, registration, forgotten password, user account page, update user details)
-- Wysiwyg editor for Blog (enable at Settings > CMS > Wysiwyg)
 
 ## Sass compiling
 
@@ -68,7 +58,3 @@ You can update theme dependencies by yourself, but it's not neccesary.
 ## About
 
 Bootstrap 3 Sass theme is made with [bootstrap-sass](https://github.com/twbs/bootstrap-sass) library, which is official Sass port of Bootstrap 3 framework by Twitter.
-
-## Todo
-
-- [ ] Install FontAwesome by Bower.

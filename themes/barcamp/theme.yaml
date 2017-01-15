@@ -1,8 +1,8 @@
-name: Bootstrap 3 Sass Pro
-description: 'Bootstrap 3 Sass Pro theme for OctoberCMS'
+name: PražskýBarcamp theme
+description: 'PražskýBarcamp theme'
 author: Vojta Svoboda
-homepage: 'http://getbootstrap.com'
 code: Bootstrap 3 Sass Pro
+homepage: 'http://www.prazskybarcamp.cz'
 form: fields.yaml
 require:
     - RainLab.User
