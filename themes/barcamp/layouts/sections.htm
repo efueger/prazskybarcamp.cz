@@ -1,6 +1,4 @@
-description = "Default layout"
-
-[staticPage]
+description = "Sections layout"
 ==
 <!DOCTYPE html>
 <html lang="en" class="en no-js">
@@ -37,13 +35,8 @@ description = "Default layout"
         </header>
 
         <!-- Content -->
-        <section class="content-main container">
-            <div class="row">
-                <div class="col-md-12">
-                    <h1>{{ this.page.title }}</h1>
-                    {% page %}
-                </div>
-            </div>
+        <section class="content-main">
+            {% page %}
         </section>
 
         <!-- Footer -->
