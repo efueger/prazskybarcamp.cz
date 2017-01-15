@@ -1,0 +1,25 @@
+[blogPosts]
+pageNumber = "{{ :page }}"
+postsPerPage = 10
+noPostsMessage = "No posts found"
+sortOrder = "published_at desc"
+categoryPage = "blog/category"
+postPage = "blog/post"
+==
+<section class="section-posts">
+    <div class="container">
+
+        <h2>Blog posts</h2>
+
+        {% component 'blogPosts' %}
+
+        {% if posts %}
+        <p>
+            <a href="{{ 'blog-list' | page }}">
+                View more posts
+            </a>
+        </p>
+        {% endif %}
+
+    </div>
+</section>

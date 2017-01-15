@@ -1,0 +1,40 @@
+title = "Blog detail"
+url = "/blog/:slug|[^0-9]"
+layout = "default"
+is_hidden = 0
+
+[blogPost]
+slug = "{{ :slug }}"
+categoryPage = "blog-category"
+==
+<?php
+function onEnd() {
+    if ($this->blogPost->post) {
+        $post = $this->blogPost->post;
+        $this->page->title = $post->title;
+        $categories = $post->categories;
+        $this['category'] = $post->categories->first();
+        $this['category_slug'] = $this['category']['attributes']['slug'];
+
+    } else {
+        $this->page->title = "Post not found!";
+        header("HTTP/1.0 404 Not Found");
+        flush();
+    }
+}
+?>
+==
+<section class="section-intro">
+    <div class="container">
+        {% set post = blogPost.post %}
+
+        {% if post %}
+            <h1>{{ post.title }}</h1>
+            {% component 'blogPost' %}
+
+        {% else %}
+            <h1>Not found :-(</h1>
+            <p>Post not found. Please continue to <a href="{{ 'blog-list' | page }}">list of all posts</a>.</p>
+        {% endif %}
+    </div>
+</section>

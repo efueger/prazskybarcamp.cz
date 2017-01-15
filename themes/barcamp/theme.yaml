@@ -1,0 +1,10 @@
+name: Bootstrap 3 Sass Pro
+description: 'Bootstrap 3 Sass Pro theme for OctoberCMS'
+author: Vojta Svoboda
+homepage: 'http://getbootstrap.com'
+code: Bootstrap 3 Sass Pro
+form: fields.yaml
+require:
+    - RainLab.User
+    - RainLab.Blog
+    - AnandPatel.WysiwygEditors

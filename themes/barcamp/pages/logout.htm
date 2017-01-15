@@ -1,0 +1,15 @@
+title = "Log out"
+url = "/logout"
+is_hidden = 0
+==
+<?php
+function onStart() {
+    $_POST['redirect'] = '/login';
+    $component = App::make('RainLab\User\Components\Session');
+    return $component->onLogout();
+}
+?>
+==
+<p>
+    Redirecting to <a href="{{ url('login') }}">login page</a>&hellip
+</p>
