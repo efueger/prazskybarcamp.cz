@@ -8,7 +8,7 @@ class CreateVotesTable extends Migration
 {
     public function up()
     {
-        Schema::create('barcamp_talks_votes', function(Blueprint $table) {
+        Schema::create('barcamp_talks_votes', function (Blueprint $table) {
             $table->engine = 'InnoDB';
             $table->increments('id');
 

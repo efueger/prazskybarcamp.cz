@@ -6,7 +6,7 @@ use October\Rain\Database\Traits\Sortable as SortableTrait;
 use October\Rain\Database\Traits\Validation as ValidationTrait;
 
 /**
- * Category Model
+ * Category Model.
  */
 class Category extends Model
 {

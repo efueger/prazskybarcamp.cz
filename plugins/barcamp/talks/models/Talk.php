@@ -7,7 +7,7 @@ use Request;
 use Str;
 
 /**
- * Talk Model
+ * Talk Model.
  */
 class Talk extends Model
 {

@@ -4,7 +4,7 @@ use BackendMenu;
 use Backend\Classes\Controller;
 
 /**
- * Talks Back-end Controller
+ * Talks Back-end Controller.
  */
 class Talks extends Controller
 {

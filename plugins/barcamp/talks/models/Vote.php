@@ -3,7 +3,7 @@
 use Model;
 
 /**
- * Vote Model
+ * Vote Model.
  */
 class Vote extends Model
 {

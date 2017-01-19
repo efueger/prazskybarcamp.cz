@@ -8,7 +8,7 @@ class CreateCategoriesTable extends Migration
 {
     public function up()
     {
-        Schema::create('barcamp_talks_categories', function(Blueprint $table) {
+        Schema::create('barcamp_talks_categories', function (Blueprint $table) {
             $table->engine = 'InnoDB';
             $table->increments('id');
 
