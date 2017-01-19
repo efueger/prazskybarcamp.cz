@@ -2,8 +2,8 @@
 
 use File;
 use RainLab\User\Models\User;
-use VojtaSvoboda\Faq\Models\Faq;
 use VojtaSvoboda\Faq\Updates\Classes\Seeder;
+use System\Models\File as DiskFile;
 use Yaml;
 
 class SeedUsersTable extends Seeder
@@ -18,12 +18,37 @@ class SeedUsersTable extends Seeder
         $seedFile = $this->getSeedFile($defaultSeed);
         $items = Yaml::parse(File::get($seedFile));
 
-        foreach ($items as $key => $item) {
+        foreach ($items as $key => $item)
+        {
+            // create user
             $item['password_confirmation'] = $item['password'];
             $user = new User();
             $user->fill($item);
+
+            // add avatar
+            $avatar = $this->getAvatar();
+            if ($avatar) {
+                $user->avatar = $avatar;
+            }
+
             $user->save();
+
+            // activate user
             $user->attemptActivation($user->activation_code);
         }
+    }
+
+    /**
+     * Get avatar File instance.
+     *
+     * @return string|null
+     */
+    private function getAvatar()
+    {
+        $file = new DiskFile();
+        $file->is_public = true;
+        $file->fromFile(__DIR__ . '/sources/profile.jpg');
+
+        return $file;
     }
 }
