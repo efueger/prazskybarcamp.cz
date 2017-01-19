@@ -22,6 +22,7 @@ class SeedUsersTable extends Seeder
         {
             // create user
             $item['password_confirmation'] = $item['password'];
+            $item['is_activated'] = true;
             $user = new User();
             $user->fill($item);
 
@@ -31,10 +32,8 @@ class SeedUsersTable extends Seeder
                 $user->avatar = $avatar;
             }
 
+            // save user
             $user->save();
-
-            // activate user
-            $user->attemptActivation($user->activation_code);
         }
     }
 
