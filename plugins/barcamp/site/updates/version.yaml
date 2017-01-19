@@ -1,0 +1,4 @@
+1.0.1:
+    - First version of Barcamp.Site plugin
+    - users_add_fields.php
+    - seed_users_table.php
