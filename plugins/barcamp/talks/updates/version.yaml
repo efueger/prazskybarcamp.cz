@@ -1,0 +1,7 @@
+1.0.1:
+    - First version of Barcamp Talks plugin
+    - create_categories_table.php
+    - create_talks_table.php
+    - create_votes_table.php
+    - seed_categories_table.php
+    - seed_talks_table.php

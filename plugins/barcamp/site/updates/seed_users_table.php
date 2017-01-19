@@ -1,8 +1,8 @@
-<?php namespace VojtaSvoboda\Faq\Updates;
+<?php namespace Barcamp\Site\Updates;
 
 use File;
 use RainLab\User\Models\User;
-use VojtaSvoboda\Faq\Updates\Classes\Seeder;
+use Barcamp\Site\Updates\Classes\Seeder;
 use System\Models\File as DiskFile;
 use Yaml;
 

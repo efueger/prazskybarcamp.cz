@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Category
+
+# Model Form Field configuration
+form: $/barcamp/talks/models/category/fields.yaml
+
+# Model Class name
+modelClass: Barcamp\Talks\Models\Category
+
+# Default redirect location
+defaultRedirect: barcamp/talks/categories
+
+# Create page
+create:
+    title: Create Category
+    redirect: barcamp/talks/categories/update/:id
+    redirectClose: barcamp/talks/categories
+
+# Update page
+update:
+    title: Edit Category
+    redirect: barcamp/talks/categories
+    redirectClose: barcamp/talks/categories
+
+# Preview page
+preview:
+    title: Preview Category
