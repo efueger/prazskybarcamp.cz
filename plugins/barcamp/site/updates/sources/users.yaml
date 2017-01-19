@@ -1,0 +1,43 @@
+%YAML 1.1
+---
+# database table: users
+-
+  name: "Barcamp"
+  email: "barcamp@domain.tld"
+  password: "barcamp"
+  phone: "420777000000"
+  is_superuser: true
+-
+  name: "Testovací Marketing"
+  email: "marketing@domain.tld"
+  password: "marketing"
+  phone: "420777000001"
+  link_facebook: "https://www.facebook.com"
+  link_twitter: "https://twitter.com"
+  link_instagram: "https://www.instagram.com"
+  link_linkedin: "https://www.linkedin.com"
+  link_web: "https://www.prazskybarcamp.cz"
+  self_promo: "Self promo lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s"
+-
+  name: "Testovací Grafika"
+  email: "grafika@domain.tld"
+  password: "grafika"
+  phone: "420777000002"
+  link_facebook: "https://www.facebook.com"
+  link_twitter: "https://twitter.com"
+  link_instagram: "https://www.instagram.com"
+  link_linkedin: "https://www.linkedin.com"
+  link_web: "https://www.prazskybarcamp.cz"
+  self_promo: "Self promo lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s"
+-
+  name: "Testovací Business"
+  email: "business@domain.tld"
+  password: "business"
+  phone: "420777000003"
+  link_facebook: "https://www.facebook.com"
+  link_twitter: "https://twitter.com"
+  link_instagram: "https://www.instagram.com"
+  link_linkedin: "https://www.linkedin.com"
+  link_web: "https://www.prazskybarcamp.cz"
+  self_promo: "Self promo lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s"
+...

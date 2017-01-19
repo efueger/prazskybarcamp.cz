@@ -1,0 +1,8 @@
+name:
+    label: rainlab.user::lang.user.name
+    required: true
+    span: left
+phone:
+    label: barcamp.site::lang.user.phone
+    required: true
+    span: right

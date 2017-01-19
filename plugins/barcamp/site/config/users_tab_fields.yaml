@@ -1,0 +1,18 @@
+link_facebook:
+    tab: barcamp.site::lang.tabs.links
+    label: barcamp.site::lang.user.link_facebook
+link_twitter:
+    tab: barcamp.site::lang.tabs.links
+    label: barcamp.site::lang.user.link_twitter
+link_instagram:
+    tab: barcamp.site::lang.tabs.links
+    label: barcamp.site::lang.user.link_instagram
+link_linkedin:
+    tab: barcamp.site::lang.tabs.links
+    label: barcamp.site::lang.user.link_linkedin
+link_web:
+    tab: barcamp.site::lang.tabs.links
+    label: barcamp.site::lang.user.link_web
+self_promo:
+    tab: barcamp.site::lang.tabs.self_promo
+    label: barcamp.site::lang.user.self_promo
