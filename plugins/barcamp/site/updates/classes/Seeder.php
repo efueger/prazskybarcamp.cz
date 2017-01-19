@@ -13,7 +13,7 @@ class Seeder extends BaseSeeder
     private $cache;
 
     /**
-     * Return dummy seed or resources seed
+     * Return dummy seed or resources seed.
      *
      * @param $defaultPath
      *
@@ -38,7 +38,7 @@ class Seeder extends BaseSeeder
     }
 
     /**
-     * Get item from cache or from $object reference
+     * Get item from cache or from $object reference.
      *
      * @param $object
      * @param string $key
@@ -67,7 +67,7 @@ class Seeder extends BaseSeeder
     }
 
     /**
-     * Get folder, where seed can be overwritten
+     * Get folder, where seed can be overwritten.
      *
      * - default folder e.g. /plugins/barcamp/site/updates/sources/messages.yaml
      * - overwritten e.g.  /resources/barcamp/site/updates/sources/messages.yaml
@@ -82,7 +82,7 @@ class Seeder extends BaseSeeder
     }
 
     /**
-     * Create file from path, save it and return File object
+     * Create file from path, save it and return File object.
      *
      * @param $path
      * @param $public
