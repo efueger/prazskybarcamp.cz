@@ -15,7 +15,7 @@
                 <li class="separator hidden-xs"></li>
                 <li class="{% if this.page.id == 'home' %}active{% endif %}"><a href="{{ 'home' | page }}">Home</a></li>
                 <li class="{% if this.page.id == 'blog-list' %}active{% endif %}"><a href="{{ 'blog-list' | page }}">Blog</a></li>
-                <li class="{% if this.page.url == '/kontakt' %}active{% endif %}"><a href="{{ 'kontakt' | staticPage }}">Kontakt</a></li>
+                <li class="{% if this.page.id == 'contact' %}active{% endif %}"><a href="{{ 'contact' | page }}">Kontakt</a></li>
             </ul>
         </div>
         <div class="collapse navbar-collapse navbar-account pull-right">
