@@ -51,7 +51,7 @@ class Seeder extends BaseSeeder
     {
         $namespace = get_class($object);
         $cache = $this->cache;
-        if ( isset($cache[$namespace][$key][$value]) ) {
+        if (isset($cache[$namespace][$key][$value])) {
             return $cache[$namespace][$key][$value];
         }
 

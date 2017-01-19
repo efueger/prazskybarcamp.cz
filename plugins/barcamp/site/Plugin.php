@@ -50,7 +50,7 @@ class Plugin extends PluginBase
      */
     private function extendUserModel()
     {
-        User::extend(function($model)
+        User::extend(function ($model)
         {
             // add new fillable fields
             $model->addFillable([
@@ -73,7 +73,7 @@ class Plugin extends PluginBase
      */
     private function extendUsersController()
     {
-        Users::extendFormFields(function($form, $model)
+        Users::extendFormFields(function ($form, $model)
         {
             // apply only for User model
             if (!$model instanceof User) {
@@ -101,7 +101,7 @@ class Plugin extends PluginBase
      */
     private function extendUsersListing()
     {
-        Event::listen('backend.list.extendColumns', function($widget)
+        Event::listen('backend.list.extendColumns', function ($widget)
         {
             // only for Users controller
             if (!$widget->getController() instanceof Users) {
