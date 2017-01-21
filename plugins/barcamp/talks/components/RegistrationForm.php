@@ -4,20 +4,22 @@ use App;
 use ApplicationException;
 use Barcamp\Talks\Facades\TalksFacade;
 use Barcamp\Talks\Models\Category;
-use Cms\Classes\ComponentBase;
 use Exception;
 use Flash;
 use Illuminate\Http\RedirectResponse;
 use Input;
 use Log;
 use October\Rain\Database\ModelException;
+use RainLab\User\Components\Account;
+use RainLab\User\Models\Settings as UserSettings;
+use RainLab\User\Models\User;
 use Redirect;
 use Request;
 use Session;
 use Validator;
 use ValidationException;
 
-class RegistrationForm extends ComponentBase
+class RegistrationForm extends Account
 {
     public function componentDetails()
     {
@@ -29,17 +31,35 @@ class RegistrationForm extends ComponentBase
 
     public function defineProperties()
     {
-        return [];
+        return [
+            'paramCode' => [
+                'title'       => 'rainlab.user::lang.account.code_param',
+                'description' => 'rainlab.user::lang.account.code_param_desc',
+                'type'        => 'string',
+                'default'     => 'code',
+            ],
+        ];
     }
 
+    /**
+     * On component run.
+     *
+     * @return bool|Redirect|string
+     */
     public function onRun()
     {
+        // activation code supplied
+        $routeParameter = $this->property('paramCode');
+        if ($activationCode = $this->param($routeParameter)) {
+            $this->onActivate($activationCode);
+        }
+
         // init
         $response = false;
 
         // form sent
         if (Input::get('submit')) {
-            $response = $this->submit();
+            $response = $this->formSubmit();
             if ($response instanceof RedirectResponse) {
                 return $response;
             }
@@ -57,13 +77,14 @@ class RegistrationForm extends ComponentBase
      *
      * @return Redirect|string
      */
-    private function submit()
+    private function formSubmit()
     {
         try {
             $data = Input::all();
             $this->validateForm($data);
             $facade = $this->getFacade();
-            $facade->register($data, $this->getFiles());
+            $data['user'] = $this->getUser($data);
+            $facade->register($data);
             Flash::success('Vaše registrace byla úspešně dokončena. Další instrukce najdete ve Vašem e-mailu.');
 
             return Redirect::to('/' . Request::path(), 303);
@@ -83,18 +104,6 @@ class RegistrationForm extends ComponentBase
         }
 
         return $error;
-    }
-
-    /**
-     * Check CSRF token.
-     *
-     * @throws ApplicationException
-     */
-    private function checkToken()
-    {
-        if (Session::token() != Input::get('_token')) {
-            throw new ApplicationException('Platnost formuláře vypršela, obnovte prosím stránku a zkuste to znovu.');
-        }
     }
 
     /**
@@ -134,6 +143,7 @@ class RegistrationForm extends ComponentBase
         ];
 
         $this->checkToken();
+        $this->checkSettings();
 
         $validation = Validator::make($data, $rules, $messages, $attributes);
         if ($validation->fails()) {
@@ -146,16 +156,49 @@ class RegistrationForm extends ComponentBase
     }
 
     /**
-     * Get attached files.
+     * Check CSRF token.
      *
-     * @return array
+     * @throws ApplicationException
      */
-    private function getFiles()
+    private function checkToken()
     {
-        $files = [];
-        $files[] = Input::file('photo', null);
+        if (Session::token() != Input::get('_token')) {
+            throw new ApplicationException('Platnost formuláře vypršela, obnovte prosím stránku a zkuste to znovu.');
+        }
+    }
 
-        return $files;
+    /**
+     * Check settings.
+     *
+     * @throws ApplicationException
+     */
+    private function checkSettings()
+    {
+        if (!UserSettings::get('allow_registration', true)) {
+            throw new ApplicationException('Omlouváme se, ale registrace jsou již uzavřené.');
+        }
+    }
+
+    /**
+     * Find user by email or create new one.
+     *
+     * @param array $data
+     *
+     * @return User
+     */
+    private function getUser(array $data)
+    {
+        $user = User::findByEmail($data['email']);
+
+        // if not exists, create new one
+        if (!$user) {
+            $facade = $this->getFacade();
+            $photo = Input::file('photo', null);
+            $user = $facade->createUser($data, $photo);
+            $this->sendActivationEmail($user);
+        }
+
+        return $user;
     }
 
     /**
