@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Typy
+
+# Model Form Field configuration
+form: $/barcamp/talks/models/type/fields.yaml
+
+# Model Class name
+modelClass: Barcamp\Talks\Models\Type
+
+# Default redirect location
+defaultRedirect: barcamp/talks/types
+
+# Create page
+create:
+    title: Create Type
+    redirect: barcamp/talks/types/update/:id
+    redirectClose: barcamp/talks/types
+
+# Update page
+update:
+    title: Edit Type
+    redirect: barcamp/talks/types
+    redirectClose: barcamp/talks/types
+
+# Preview page
+preview:
+    title: Preview Type

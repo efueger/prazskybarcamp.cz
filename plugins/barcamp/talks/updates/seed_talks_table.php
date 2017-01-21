@@ -2,6 +2,7 @@
 
 use Barcamp\Talks\Models\Category;
 use Barcamp\Talks\Models\Talk;
+use Barcamp\Talks\Models\Type;
 use Barcamp\Talks\Updates\Classes\Seeder;
 use File;
 use RainLab\User\Models\User;
@@ -37,6 +38,13 @@ class SeedTalksTable extends Seeder
                 $item['category_id'] = $category->id;
             }
             unset($item['category']);
+
+            // find category
+            $type = Type::where('slug', $item['type'])->first();
+            if ($type) {
+                $item['type_id'] = $type->id;
+            }
+            unset($item['type']);
 
             Talk::create($item);
         }

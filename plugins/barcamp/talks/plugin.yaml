@@ -11,6 +11,9 @@ permissions:
     barcamp.talks.categories:
         tab: 'Správa přednášek'
         label: 'Správa kategorií'
+    barcamp.talks.types:
+        tab: 'Správa přednášek'
+        label: 'Správa typů přednášek'
     barcamp.talks.votes:
         tab: 'Správa přednášek'
         label: 'Přehled hlasů'

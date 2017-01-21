@@ -6,7 +6,7 @@ use Backend\Classes\Controller;
 /**
  * Categories Back-end Controller.
  */
-class Categories extends Controller
+class Types extends Controller
 {
     public $implement = [
         'Backend\Behaviors\FormController',
@@ -21,20 +21,13 @@ class Categories extends Controller
     public $reorderConfig = 'config_reorder.yaml';
 
     public $requiredPermissions = [
-        'barcamp.talks.categories',
+        'barcamp.talks.types',
     ];
 
     public function __construct()
     {
         parent::__construct();
 
-        BackendMenu::setContext('Barcamp.Talks', 'talks', 'categories');
-    }
-
-    public function listOverrideColumnValue($record, $columnName, $definition = null)
-    {
-        if ($columnName == 'color') {
-            return '<div style="width:18px;height:18px;background-color:'.$record->color.'"></div>';
-        }
+        BackendMenu::setContext('Barcamp.Talks', 'talks', 'types');
     }
 }

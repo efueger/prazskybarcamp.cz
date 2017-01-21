@@ -13,6 +13,11 @@ columns:
         sortable: true
         relation: user
         select: name
+    type_id:
+        label: Typ
+        sortable: true
+        relation: type
+        select: name
     name:
         label: Název
         type: text

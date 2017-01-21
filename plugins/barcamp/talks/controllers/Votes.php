@@ -9,7 +9,7 @@ use Backend\Classes\Controller;
 class Votes extends Controller
 {
     public $implement = [
-        'Backend.Behaviors.ListController',
+        'Backend\Behaviors\ListController',
     ];
 
     public $listConfig = 'config_list.yaml';

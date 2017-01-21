@@ -18,6 +18,9 @@ class CreateTalksTable extends Migration
             $table->integer('category_id')->unsigned()->nullable();
             $table->foreign('category_id')->references('id')->on('barcamp_talks_categories');
 
+            $table->integer('type_id')->unsigned()->nullable();
+            $table->foreign('type_id')->references('id')->on('barcamp_talks_types');
+
             $table->string('name', 300);
             $table->string('hash', 32);
             $table->datetime('date')->nullable();

@@ -5,10 +5,15 @@
 fields:
     name:
         label: Název
-        span: left
-    category:
+    user:
         type: relation
-        label: Kategorie
+        label: Přednášející
+        nameFrom: name
+        span: left
+        required: true
+    type:
+        type: relation
+        label: Typ
         nameFrom: name
         span: right
         required: true
@@ -18,9 +23,9 @@ fields:
         span: left
         minDate: 2017-04-07
         maxDate: 2017-04-07
-    user:
+    category:
         type: relation
-        label: Přednášející
+        label: Kategorie
         nameFrom: name
         span: right
         required: true

@@ -33,7 +33,7 @@ class Talk extends Model
      * @var array Fillable fields
      */
     protected $fillable = [
-        'user_id', 'category_id', 'name', 'annotation', 'note',
+        'user_id', 'category_id', 'type_id', 'name', 'annotation', 'note',
     ];
 
     /**
@@ -57,6 +57,7 @@ class Talk extends Model
      */
     public $belongsTo = [
         'category' => 'Barcamp\Talks\Models\Category',
+        'type' => 'Barcamp\Talks\Models\Type',
         'user' => 'RainLab\User\Models\User',
     ];
 
