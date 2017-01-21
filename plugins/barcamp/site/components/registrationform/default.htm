@@ -1,0 +1,124 @@
+<form
+    method="post"
+    accept-charset="UTF-8"
+    enctype="multipart/form-data"
+    data-request="onRegister">
+
+    <div class="form-group">
+        <input
+            name="type" checked="checked"
+            id="type-speaker"
+            type="radio"
+            placeholder="Speaker" />
+        &nbsp;
+        <label for="type-speaker">Speaker</label>
+        <br />
+        <input
+            name="type"
+            id="type-workshop"
+            type="radio"
+            placeholder="Workshop" />
+        &nbsp;
+        <label for="type-workshop">Workshop</label>
+    </div>
+
+    <div class="form-group">
+        <label for="registerName">Jméno a příjmení</label>
+        <input
+            name="name"
+            type="text"
+            class="form-control"
+            id="registerName"
+            placeholder="Jméno a příjmení" />
+    </div>
+
+    <div class="form-group">
+        <label for="talkName">Název přednášky</label>
+        <input
+            name="name"
+            type="text"
+            class="form-control"
+            id="talkName"
+            placeholder="Název přednášky" />
+    </div>
+
+    <div class="form-group">
+        <label for="annotation">Anotace</label>
+        <textarea
+            name="annotation"
+            class="form-control"
+            placeholder="Anotace"
+            id="annotation">
+        </textarea>
+    </div>
+
+    <div class="form-group">
+        <label for="selfpromo">Selfpromo</label>
+        <textarea
+            name="annotation"
+            class="form-control"
+            placeholder="Selfpromo"
+            id="selfpromo">
+        </textarea>
+    </div>
+
+    <div class="form-group">
+        <label for="social">Sociální sítě</label>
+        <textarea
+            name="social"
+            class="form-control"
+            placeholder="Sociální sítě"
+            id="social">
+        </textarea>
+    </div>
+
+    <div class="form-group">
+        <label for="phone">Telefon</label>
+        <input
+            name="name"
+            type="text"
+            class="form-control"
+            id="phone"
+            placeholder="Telefon" />
+    </div>
+
+    <div class="form-group">
+        <label for="email">E-mail</label>
+        <input
+            name="name"
+            type="text"
+            class="form-control"
+            id="email"
+            placeholder="E-mail" />
+    </div>
+
+    <div class="form-group">
+        <label for="note">Zpráva pro organizátory</label>
+        <textarea
+            name="note"
+            class="form-control"
+            placeholder="Zpráva pro organizátory"
+            id="note">
+        </textarea>
+    </div>
+
+    <div class="form-group">
+        <label for="talkName">Nahrát fotku</label>
+        <input
+            type="file"
+            name="photo"
+            id="photo"
+            class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <label for="category">Do jaké kategorie spadá přednáška</label>
+        <select name="category" id="category" class="form-control">
+            {% for category in categories %}
+            <option value="{{ category.slug }}">{{ category.name }}</option>
+            {% endfor %}
+        </select>
+    </div>
+
+    <button type="submit" class="btn btn-default">Registrovat se</button>
+</form>

@@ -1,0 +1,15 @@
+preset: psr2
+
+enabled:
+  - phpdoc_add_missing_param_annotation
+  - phpdoc_summary
+  - phpdoc_type_to_var
+  - phpdoc_types
+
+disabled:
+  - braces
+  - psr4
+
+finder:
+  path:
+    - "plugins/barcamp"

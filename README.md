@@ -1,5 +1,9 @@
 # PrazskyBarcamp.cz
 
+| Master  | Develop |
+| :------ | :------ |
+| [![StyleCI](https://styleci.io/repos/79055930/shield?branch=master)](https://styleci.io/repos/79055930) | [![StyleCI](https://styleci.io/repos/79055930/shield?branch=develop)](https://styleci.io/repos/79055930) |
+
 www.prazskybarcamp.cz
 
 ## Installation

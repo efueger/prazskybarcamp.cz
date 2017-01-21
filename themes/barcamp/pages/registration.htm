@@ -3,14 +3,11 @@ url = "/registrace/:code?"
 layout = "default"
 is_hidden = 0
 
-[account]
-redirect = "login"
-paramCode = "code"
-forceSecure = 0
-
 [session]
 security = "guest"
 redirect = "my-account"
+
+[registrationForm]
 ==
 {% if not user %}
 <div class="container">
@@ -19,7 +16,7 @@ redirect = "my-account"
         {% flash %}
         <p class="alert alert-success">{{ message }}</p>
         {% endflash %}
-        {% partial account ~ '::register' %}
+        {% component 'registrationForm' %}
     </div>
 </div>
 {% endif %}

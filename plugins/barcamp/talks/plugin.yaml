@@ -1,0 +1,19 @@
+plugin:
+    name: 'Barcamp Talks'
+    description: 'Plugin for management Barcamp Talks and Votes.'
+    author: 'Vojta Svoboda'
+    icon: 'icon-calendar'
+    homepage: 'http://www.prazskybarcamp.cz'
+permissions:
+    barcamp.talks.talks:
+        tab: 'Správa přednášek'
+        label: 'Správa přednášek'
+    barcamp.talks.categories:
+        tab: 'Správa přednášek'
+        label: 'Správa kategorií'
+    barcamp.talks.types:
+        tab: 'Správa přednášek'
+        label: 'Správa typů přednášek'
+    barcamp.talks.votes:
+        tab: 'Správa přednášek'
+        label: 'Přehled hlasů'

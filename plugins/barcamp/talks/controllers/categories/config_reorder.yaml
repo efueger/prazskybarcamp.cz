@@ -1,0 +1,5 @@
+title: Kategorie
+modelClass: Barcamp\Talks\Models\Category
+nameFrom: name
+toolbar:
+    buttons: reorder_toolbar

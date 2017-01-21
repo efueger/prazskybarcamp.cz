@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Přednáška
+
+# Model Form Field configuration
+form: $/barcamp/talks/models/talk/fields.yaml
+
+# Model Class name
+modelClass: Barcamp\Talks\Models\Talk
+
+# Default redirect location
+defaultRedirect: barcamp/talks/talks
+
+# Create page
+create:
+    title: Vytvořit přednášku
+    redirect: barcamp/talks/talks/update/:id
+    redirectClose: barcamp/talks/talks
+
+# Update page
+update:
+    title: Upravit přednášku
+    redirect: barcamp/talks/talks
+    redirectClose: barcamp/talks/talks
+
+# Preview page
+preview:
+    title: Preview Talk

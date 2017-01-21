@@ -1,0 +1,28 @@
+%YAML 1.1
+---
+# database table: barcamp_talks_talks
+-
+  name: "Jak na kulervoucí e-shop, který bude fungovat a vydělávat?"
+  user: "marketing@domain.tld"
+  type: "speaker"
+  category: "marketing"
+  annotation: "E-shop chce mít dneska kde kdo. Vypadá to jako zcela jednoduchý start podnikání, ale ono to zase tak triviální nebude. Povíme si, kde se mohou objevit problémy a jak je to ve skutečnosti jednoduché/složité. Praxe především!"
+  note: "Testovací poznámka řečníka"
+  approved: 1
+-
+  name: "Jak nakreslit kulervoucí e-shop, který se bude líbit všem?"
+  user: "grafika@domain.tld"
+  type: "workshop"
+  category: "grafika"
+  annotation: "Povíme si, kde se mohou objevit problémy a jak je to ve skutečnosti jednoduché/složité. Praxe především! E-shop chce mít dneska kde kdo. Vypadá to jako zcela jednoduchý start podnikání, ale ono to zase tak triviální nebude."
+  note: "Testovací poznámka řečníka"
+  approved: 1
+-
+  name: "Spamový titulek přednášky, kterou nechceme schválit"
+  user: "business@domain.tld"
+  type: "speaker"
+  category: "business"
+  annotation: "Praxe především! E-shop chce mít dneska kde kdo. Vypadá to jako zcela jednoduchý start podnikání, ale ono to zase tak triviální nebude. Povíme si, kde se mohou objevit problémy a jak je to ve skutečnosti jednoduché/složité."
+  note: "Testovací poznámka řečníka"
+  approved: 0
+...

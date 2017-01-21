@@ -1,0 +1,8 @@
+%YAML 1.1
+---
+# database table: barcamp_talks_types
+-
+  name: "Speaker"
+-
+  name: "Workshop"
+...
