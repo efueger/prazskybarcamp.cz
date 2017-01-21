@@ -26,6 +26,7 @@ class Talk extends Model
     public $rules = [
         'name' => 'required|min:10',
         'hash' => 'unique:barcamp_talks_talks',
+        'annotation' => 'required',
         'approved' => 'boolean',
     ];
 
