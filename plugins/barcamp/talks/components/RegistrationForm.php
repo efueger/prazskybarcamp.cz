@@ -80,12 +80,19 @@ class RegistrationForm extends Account
     private function formSubmit()
     {
         try {
+            // validate form, register user and talk
             $data = Input::all();
             $this->validateForm($data);
             $facade = $this->getFacade();
             $data['user'] = $this->getUser($data);
             $facade->register($data);
-            Flash::success('Vaše registrace byla úspešně dokončena. Další instrukce najdete ve Vašem e-mailu.');
+
+            // success
+            $message = "Vaše registrace byla úspešně dokončena.";
+            if (isset($data['user']->new)) {
+                $message .= ' Aktivujte prosím svůj účet dle instrukcí ve Vašem e-mailu.';
+            }
+            Flash::success($message);
 
             return Redirect::to('/' . Request::path(), 303);
 
@@ -109,6 +116,8 @@ class RegistrationForm extends Account
     /**
      * Validate form. We could use Model validator, but we need to validate both User's and Task's data at once.
      *
+     * For disable more talks for one user, add new rule to email: unique:users.
+     *
      * @param $data
      */
     private function validateForm($data)
@@ -119,7 +128,7 @@ class RegistrationForm extends Account
             'talkName' => 'required|min:10',
             'annotation' => 'required|min:20',
             'phone' => 'required|between:9,13',
-            'email' => 'required|between:6,255|email|unique:users',
+            'email' => 'required|between:6,255|email',
             'category' => 'required',
             'photo' => 'required',
         ];
@@ -196,6 +205,7 @@ class RegistrationForm extends Account
             $photo = Input::file('photo', null);
             $user = $facade->createUser($data, $photo);
             $this->sendActivationEmail($user);
+            $user->new = true;
         }
 
         return $user;

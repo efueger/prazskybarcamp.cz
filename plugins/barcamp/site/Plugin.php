@@ -65,6 +65,14 @@ class Plugin extends PluginBase
             $model->rules['link_linkedin'] = 'url';
             $model->rules['link_web'] = 'url';
             $model->rules['self_promo'] = 'max:1000';
+
+            // attribute names
+            $model->attributeNames['phone'] = 'Telefon';
+            $model->attributeNames['link_facebook'] = 'Odkaz na Facebook';
+            $model->attributeNames['link_twitter'] = 'Odkaz na Twitter';
+            $model->attributeNames['link_instagram'] = 'Odkaz na Instagram';
+            $model->attributeNames['link_linkedin'] = 'Odkaz na LinkedIn';
+            $model->attributeNames['link_web'] = 'Odkaz na Web';
         });
     }
 

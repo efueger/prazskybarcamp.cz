@@ -76,17 +76,16 @@ class TalksFacade
             $data['name'] = $data['registerName'];
         }
 
+        // add each social network
+        $data = array_merge($data, $this->parseSocialNetworks($data['social']));
+
         // create User
         $password = Str::random(24);
-        $user = $this->users->create([
-            'name' => $data['name'],
-            'email' => $data['email'],
-            'username' => $data['email'],
-            'password' => $password,
-            'password_confirmation' => $password,
-            'phone' => $data['phone'],
-            'self_promo' => $data['selfpromo'],
-        ]);
+        $data['username'] = $data['email'];
+        $data['password'] = $password;
+        $data['password_confirmation'] = $password;
+        $data['self_promo'] = $data['selfpromo'];
+        $user = $this->users->create($data);
 
         // add photo to User
         if ($user && $photo) {
@@ -104,7 +103,7 @@ class TalksFacade
      *
      * @return Category
      */
-    private function getTalkCategory($slug)
+    public function getTalkCategory($slug)
     {
         return $this->categories->where('slug', $slug)->first();
     }
@@ -116,8 +115,69 @@ class TalksFacade
      *
      * @return Type
      */
-    private function getTalkType($slug)
+    public function getTalkType($slug)
     {
         return $this->types->where('slug', $slug)->first();
+    }
+
+    /**
+     * Parse multiline string to array of social networks.
+     *
+     * @param string $data
+     *
+     * @return array
+     */
+    public function parseSocialNetworks($data)
+    {
+        $return = [];
+        $lines = explode("\n", $data);
+
+        foreach($lines as $line) {
+            if (empty($line)) {
+                continue;
+            }
+
+            if (mb_strpos($line, 'facebook') !== false) {
+                $return['link_facebook'] = $this->makeUrl($line);
+
+            } elseif (mb_strpos($line, 'twitter') !== false) {
+                $return['link_twitter'] = $this->makeUrl($line);
+
+            } elseif (mb_strpos($line, 'instagram') !== false) {
+                $return['link_instagram'] = $this->makeUrl($line);
+
+            } elseif (mb_strpos($line, 'linkedin') !== false) {
+                $return['link_linkedin'] = $this->makeUrl($line);
+
+            } elseif (mb_strpos($line, '.') !== false) {
+                $customUrl = true;
+                $return['link_web'] = $this->makeUrl($line, $customUrl);
+            }
+        }
+
+        return $return;
+    }
+
+    /**
+     * Make URL from string if it isn't.
+     *
+     * @param string $url
+     * @param bool $customUrl
+     *
+     * @return mixed
+     */
+    private function makeUrl($url, $customUrl = false)
+    {
+        // URL ok
+        if (mb_substr($url, 0, 8) === "https://" || mb_substr($url, 0, 7) === "http://") {
+            return $url;
+        }
+
+        // use only HTTP for custom URL
+        if ($customUrl) {
+            return 'http://' . $url;
+        }
+
+        return 'https://' . $url;
     }
 }
