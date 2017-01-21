@@ -42,24 +42,24 @@ class Plugin extends PluginBase
                 'order'       => 500,
                 'sideMenu' => [
                     'talks' => [
-                        'label'       => 'Schválené',
+                        'label'       => 'Přednášky',
                         'url'         => Backend::url('barcamp/talks/talks'),
-                        'icon'        => 'icon-user-plus',
+                        'icon'        => 'icon-bullhorn',
                         'permissions' => ['barcamp.talks.talks'],
                         'order'       => 100,
                     ],
-                    'waiting' => [
-                        'label'       => 'Čekající na schválení',
-                        'url'         => Backend::url('barcamp/talks/talks'),
-                        'icon'        => 'icon-user',
-                        'permissions' => ['barcamp.talks.talks'],
+                    'categories' => [
+                        'label'       => 'Kategorie',
+                        'url'         => Backend::url('barcamp/talks/categories'),
+                        'icon'        => 'icon-folder',
+                        'permissions' => ['barcamp.talks.categories'],
                         'order'       => 200,
                     ],
                     'votes' => [
                         'label'       => 'Hlasování',
-                        'url'         => Backend::url('barcamp/talks/talks'),
+                        'url'         => Backend::url('barcamp/talks/votes'),
                         'icon'        => 'icon-comment-o',
-                        'permissions' => ['barcamp.talks.categories'],
+                        'permissions' => ['barcamp.talks.votes'],
                         'order'       => 300,
                     ],
                 ],

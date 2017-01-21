@@ -9,12 +9,14 @@ use Backend\Classes\Controller;
 class Votes extends Controller
 {
     public $implement = [
-        'Backend.Behaviors.FormController',
-        'Backend.Behaviors.ListController'
+        'Backend.Behaviors.ListController',
     ];
 
-    public $formConfig = 'config_form.yaml';
     public $listConfig = 'config_list.yaml';
+
+    public $requiredPermissions = [
+        'barcamp.talks.votes',
+    ];
 
     public function __construct()
     {

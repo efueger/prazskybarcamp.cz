@@ -10,11 +10,16 @@ class Talks extends Controller
 {
     public $implement = [
         'Backend.Behaviors.FormController',
-        'Backend.Behaviors.ListController'
+        'Backend.Behaviors.ListController',
     ];
 
     public $formConfig = 'config_form.yaml';
+
     public $listConfig = 'config_list.yaml';
+
+    public $requiredPermissions = [
+        'barcamp.talks.talks',
+    ];
 
     public function __construct()
     {

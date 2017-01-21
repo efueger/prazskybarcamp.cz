@@ -3,6 +3,33 @@
 # ===================================
 
 fields:
-    id:
-        label: ID
-        disabled: true
+    name:
+        label: Název
+        span: left
+    category:
+        type: relation
+        label: Kategorie
+        nameFrom: name
+        span: right
+        required: true
+    date:
+        label: Datum
+        type: datepicker
+        span: left
+        minDate: 2017-04-07
+        maxDate: 2017-04-07
+    user:
+        type: relation
+        label: Přednášející
+        nameFrom: name
+        span: right
+        required: true
+    annotation:
+        label: Anotace
+        type: textarea
+        size: small
+    note:
+        label: Poznámka
+    approved:
+        label: Schválená
+        type: switch

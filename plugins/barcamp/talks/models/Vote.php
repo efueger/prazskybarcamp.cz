@@ -16,4 +16,13 @@ class Vote extends Model
      * @var array Datetime fields.
      */
     public $dates = ['created_at', 'updated_at'];
+
+    /**
+     * Belongs to relationships.
+     *
+     * @var array
+     */
+    public $belongsTo = [
+        'talk' => 'Barcamp\Talks\Models\Talk',
+    ];
 }

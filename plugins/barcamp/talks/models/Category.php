@@ -36,6 +36,20 @@ class Category extends Model
     public $dates = ['created_at', 'updated_at', 'deleted_at'];
 
     /**
+     * Belongs to many relationships.
+     *
+     * @var array
+     */
+    public $belongsToMany = [
+        'talks' => ['Barcamp\Talks\Models\Talk',
+            'table' => 'barcamp_talks_talks',
+            'order' => 'name desc',
+            'scope' => 'isApproved',
+            'timestamps' => true,
+        ],
+    ];
+
+    /**
      * Fetch only enabled categories.
      *
      * @param $query

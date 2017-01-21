@@ -3,7 +3,7 @@
 # ===================================
 
 # Record name
-name: Talk
+name: Přednáška
 
 # Model Form Field configuration
 form: $/barcamp/talks/models/talk/fields.yaml
@@ -16,13 +16,13 @@ defaultRedirect: barcamp/talks/talks
 
 # Create page
 create:
-    title: Create Talk
+    title: Vytvořit přednášku
     redirect: barcamp/talks/talks/update/:id
     redirectClose: barcamp/talks/talks
 
 # Update page
 update:
-    title: Edit Talk
+    title: Upravit přednášku
     redirect: barcamp/talks/talks
     redirectClose: barcamp/talks/talks
 

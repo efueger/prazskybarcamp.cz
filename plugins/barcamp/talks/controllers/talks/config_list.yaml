@@ -9,7 +9,7 @@ list: $/barcamp/talks/models/talk/columns.yaml
 modelClass: Barcamp\Talks\Models\Talk
 
 # List Title
-title: Manage Talks
+title: Správa přednášek
 
 # Link URL for each record
 recordUrl: barcamp/talks/talks/update/:id
@@ -27,12 +27,14 @@ showSetup: true
 showSorting: true
 
 # Default sorting column
-# defaultSort:
-#     column: created_at
-#     direction: desc
+defaultSort:
+    column: approved
+    direction: asc
 
 # Display checkboxes next to each record
 # showCheckboxes: true
+
+filter: config_filter.yaml
 
 # Toolbar widget configuration
 toolbar:

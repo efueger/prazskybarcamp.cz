@@ -9,10 +9,10 @@ list: $/barcamp/talks/models/vote/columns.yaml
 modelClass: Barcamp\Talks\Models\Vote
 
 # List Title
-title: Manage Votes
+title: Hlasování
 
 # Link URL for each record
-recordUrl: barcamp/talks/votes/update/:id
+# recordUrl: barcamp/talks/votes/update/:id
 
 # Message to display if the list is empty
 noRecordsMessage: backend::lang.list.no_records
@@ -27,9 +27,9 @@ showSetup: true
 showSorting: true
 
 # Default sorting column
-# defaultSort:
-#     column: created_at
-#     direction: desc
+defaultSort:
+    column: created_at
+    direction: desc
 
 # Display checkboxes next to each record
 # showCheckboxes: true
@@ -37,7 +37,7 @@ showSorting: true
 # Toolbar widget configuration
 toolbar:
     # Partial for toolbar buttons
-    buttons: list_toolbar
+    # buttons: list_toolbar
 
     # Search widget configuration
     search:

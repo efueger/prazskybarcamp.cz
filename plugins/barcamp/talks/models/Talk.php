@@ -42,6 +42,25 @@ class Talk extends Model
     public $dates = ['created_at', 'updated_at', 'deleted_at'];
 
     /**
+     * Has many relationship.
+     *
+     * @var array
+     */
+    public $hasMany = [
+        'votes' => 'Barcamp\Talks\Models\Vote',
+    ];
+
+    /**
+     * Belongs to relationships.
+     *
+     * @var array
+     */
+    public $belongsTo = [
+        'category' => 'Barcamp\Talks\Models\Category',
+        'user' => 'RainLab\User\Models\User',
+    ];
+
+    /**
      * Before create reservation.
      */
     public function beforeCreate()
@@ -62,6 +81,18 @@ class Talk extends Model
     public function scopeIsApproved($query)
     {
         return $query->where('approved', true);
+    }
+
+    /**
+     * Fetch only waiting talks.
+     *
+     * @param $query
+     *
+     * @return mixed
+     */
+    public function scopeIsWaiting($query)
+    {
+        return $query->where('approved', false);
     }
 
     /**
