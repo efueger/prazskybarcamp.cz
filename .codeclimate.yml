@@ -1,0 +1,14 @@
+ratings:
+  paths:
+  - "**.css"
+  - "**.js"
+  - "**.php"
+exclude_paths:
+- "plugins/anandpatel/"
+- "plugins/rainlab/"
+- "plugins/vojtasvoboda/"
+- "themes/barcamp/assets/vendor/"
+- "themes/barcamp/content/"
+- "themes/barcamp/layouts/"
+- "themes/barcamp/pages/"
+- "themes/barcamp/partials/"
