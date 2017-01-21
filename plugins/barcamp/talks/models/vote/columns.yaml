@@ -1,0 +1,30 @@
+# ===================================
+#  List Column Definitions
+# ===================================
+
+columns:
+    created_at:
+        label: Vytvořeno
+        type: timetense
+        sortable: true
+    talk_id:
+        label: Přednáška
+        relation: talk
+        select: name
+        searchable: true
+        sortable: true
+    ip:
+        label: 'IP adresa'
+        type: text
+        searchable: true
+        sortable: true
+    ip_forwarded:
+        label: 'IP přesměrování'
+        type: text
+        searchable: true
+        sortable: true
+    user_agent:
+        label: 'User agent'
+        type: text
+        searchable: true
+        sortable: true

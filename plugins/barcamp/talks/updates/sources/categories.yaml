@@ -1,0 +1,13 @@
+%YAML 1.1
+---
+# database table: barcamp_talks_categories
+-
+  name: "Marketing"
+  color: "#50e1c0"
+-
+  name: "Grafika"
+  color: "#fe2e7c"
+-
+  name: "Business"
+  color: "#4b8fe4"
+...

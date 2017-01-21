@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxGraphModel dx="2276" dy="2077" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1"
+              page="1" pageScale="1" pageWidth="826" pageHeight="1169" math="0" shadow="0">
+    <root>
+        <mxCell id="0" style=";html=1;"/>
+        <mxCell id="1" style=";html=1;" parent="0"/>
+        <mxCell id="5d5fca574e4e6079-137"
+                value="&lt;p style=&quot;margin: 4px 0px 0px ; text-align: center&quot;&gt;&lt;b&gt;users&lt;/b&gt;&lt;/p&gt;&lt;hr&gt;&lt;p style=&quot;margin: 0px ; margin-left: 8px&quot;&gt;id&lt;/p&gt;&lt;p style=&quot;margin: 0px ; margin-left: 8px&quot;&gt;name&lt;/p&gt;&lt;p style=&quot;margin: 0px ; margin-left: 8px&quot;&gt;email&lt;/p&gt;&lt;p style=&quot;margin: 0px ; margin-left: 8px&quot;&gt;&lt;span&gt;password&lt;/span&gt;&lt;br&gt;&lt;/p&gt;&lt;p style=&quot;margin: 0px ; margin-left: 8px&quot;&gt;phone&lt;span&gt;&lt;br&gt;&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot;margin: 0px ; margin-left: 8px&quot;&gt;self_promo&lt;/p&gt;&lt;p style=&quot;margin: 0px ; margin-left: 8px&quot;&gt;link_instagram&lt;/p&gt;&lt;p style=&quot;margin: 0px ; margin-left: 8px&quot;&gt;&lt;span&gt;link_&lt;/span&gt;facebook&lt;/p&gt;&lt;p style=&quot;margin: 0px ; margin-left: 8px&quot;&gt;&lt;span&gt;link_&lt;/span&gt;linkedin&lt;/p&gt;&lt;p style=&quot;margin: 0px ; margin-left: 8px&quot;&gt;link_twitter&lt;br&gt;&lt;/p&gt;&lt;p style=&quot;margin: 0px ; margin-left: 8px&quot;&gt;link_web&lt;br&gt;&lt;/p&gt;&lt;p style=&quot;margin: 0px ; margin-left: 8px&quot;&gt;is_activated&lt;/p&gt;&lt;p style=&quot;margin: 0px ; margin-left: 8px&quot;&gt;created_at&lt;/p&gt;&lt;p style=&quot;margin: 0px ; margin-left: 8px&quot;&gt;updated_at&lt;/p&gt;&lt;p style=&quot;margin: 0px ; margin-left: 8px&quot;&gt;deleted_at&lt;/p&gt;"
+                style="verticalAlign=top;align=left;overflow=fill;fontSize=12;fontFamily=Helvetica;html=1;rounded=0;shadow=1;glass=0;comic=0;strokeColor=#003366;fillColor=#D4E1F5;"
+                vertex="1" parent="1">
+            <mxGeometry x="-370" y="-175" width="180" height="250" as="geometry"/>
+        </mxCell>
+        <mxCell id="5d5fca574e4e6079-138"
+                value="&lt;p style=&quot;margin: 4px 0px 0px ; text-align: center&quot;&gt;&lt;b&gt;talk&lt;/b&gt;&lt;/p&gt;&lt;hr&gt;&lt;p style=&quot;margin: 0px ; margin-left: 8px&quot;&gt;id&lt;/p&gt;&lt;p style=&quot;margin: 0px ; margin-left: 8px&quot;&gt;user_id&lt;/p&gt;&lt;p style=&quot;margin: 0px ; margin-left: 8px&quot;&gt;category_id&lt;/p&gt;&lt;p style=&quot;margin: 0px ; margin-left: 8px&quot;&gt;name&lt;/p&gt;&lt;p style=&quot;margin: 0px ; margin-left: 8px&quot;&gt;hash&lt;/p&gt;&lt;p style=&quot;margin: 0px ; margin-left: 8px&quot;&gt;date&lt;/p&gt;&lt;p style=&quot;margin: 0px ; margin-left: 8px&quot;&gt;annotation&lt;/p&gt;&lt;p style=&quot;margin: 0px ; margin-left: 8px&quot;&gt;note&lt;/p&gt;&lt;p style=&quot;margin: 0px ; margin-left: 8px&quot;&gt;votes&lt;/p&gt;&lt;p style=&quot;margin: 0px ; margin-left: 8px&quot;&gt;approved&lt;/p&gt;&lt;p style=&quot;margin: 0px ; margin-left: 8px&quot;&gt;&lt;br&gt;&lt;/p&gt;"
+                style="verticalAlign=top;align=left;overflow=fill;fontSize=12;fontFamily=Helvetica;html=1;rounded=0;shadow=1;glass=0;comic=0;strokeColor=#003366;fillColor=#D4E1F5;"
+                vertex="1" parent="1">
+            <mxGeometry x="-80" y="-143" width="140" height="185" as="geometry"/>
+        </mxCell>
+        <mxCell id="5d5fca574e4e6079-140"
+                value="&lt;p style=&quot;margin: 4px 0px 0px ; text-align: center&quot;&gt;&lt;b&gt;categories&lt;/b&gt;&lt;/p&gt;&lt;hr&gt;&lt;p style=&quot;margin: 0px ; margin-left: 8px&quot;&gt;id&lt;/p&gt;&lt;p style=&quot;margin: 0px ; margin-left: 8px&quot;&gt;name&lt;/p&gt;&lt;p style=&quot;margin: 0px ; margin-left: 8px&quot;&gt;slug&lt;/p&gt;&lt;p style=&quot;margin: 0px ; margin-left: 8px&quot;&gt;color&lt;/p&gt;&lt;p style=&quot;margin: 0px ; margin-left: 8px&quot;&gt;sort_order&lt;/p&gt;&lt;p style=&quot;margin: 0px ; margin-left: 8px&quot;&gt;enabled&lt;/p&gt;&lt;p style=&quot;margin: 0px ; margin-left: 8px&quot;&gt;created_at&lt;/p&gt;&lt;p style=&quot;margin: 0px ; margin-left: 8px&quot;&gt;updated_at&lt;/p&gt;&lt;p style=&quot;margin: 0px ; margin-left: 8px&quot;&gt;deleted_at&lt;/p&gt;"
+                style="verticalAlign=top;align=left;overflow=fill;fontSize=12;fontFamily=Helvetica;html=1;rounded=0;shadow=1;glass=0;comic=0;strokeColor=#003366;fillColor=#D4E1F5;"
+                vertex="1" parent="1">
+            <mxGeometry x="180" y="-135" width="110" height="170" as="geometry"/>
+        </mxCell>
+        <mxCell id="5d5fca574e4e6079-141"
+                value="&lt;p style=&quot;margin: 4px 0px 0px ; text-align: center&quot;&gt;&lt;b&gt;vote&lt;/b&gt;&lt;/p&gt;&lt;hr&gt;&lt;p style=&quot;margin: 0px ; margin-left: 8px&quot;&gt;id&lt;/p&gt;&lt;p style=&quot;margin: 0px ; margin-left: 8px&quot;&gt;talk_id&lt;/p&gt;&lt;p style=&quot;margin: 0px ; margin-left: 8px&quot;&gt;ip&lt;/p&gt;&lt;p style=&quot;margin: 0px ; margin-left: 8px&quot;&gt;ip_forwarded&lt;/p&gt;&lt;p style=&quot;margin: 0px ; margin-left: 8px&quot;&gt;user_agent&lt;/p&gt;&lt;p style=&quot;margin: 0px ; margin-left: 8px&quot;&gt;created_at&lt;/p&gt;&lt;p style=&quot;margin: 0px ; margin-left: 8px&quot;&gt;updated_at&lt;/p&gt;"
+                style="verticalAlign=top;align=left;overflow=fill;fontSize=12;fontFamily=Helvetica;html=1;rounded=0;shadow=1;glass=0;comic=0;strokeColor=#003366;fillColor=#D4E1F5;"
+                vertex="1" parent="1">
+            <mxGeometry x="-80" y="105" width="140" height="140" as="geometry"/>
+        </mxCell>
+        <mxCell id="5d5fca574e4e6079-145" value="Relation"
+                style="endArrow=open;html=1;endSize=12;startArrow=diamondThin;startSize=14;startFill=0;edgeStyle=orthogonalEdgeStyle;fontColor=#003366;exitX=1;exitY=0.5;entryX=0;entryY=0.5;"
+                edge="1" parent="1" source="5d5fca574e4e6079-137" target="5d5fca574e4e6079-138">
+            <mxGeometry x="0.4667" y="43" relative="1" as="geometry">
+                <mxPoint x="-330" y="235" as="sourcePoint"/>
+                <mxPoint x="-130" y="-5" as="targetPoint"/>
+                <Array as="points">
+                    <mxPoint x="-120" y="-50"/>
+                    <mxPoint x="-120" y="-50"/>
+                </Array>
+                <mxPoint x="-40" y="28" as="offset"/>
+            </mxGeometry>
+        </mxCell>
+        <mxCell id="5d5fca574e4e6079-146" value="1"
+                style="resizable=0;html=1;align=left;verticalAlign=top;labelBackgroundColor=#ffffff;fontSize=10;"
+                vertex="1" connectable="0" parent="5d5fca574e4e6079-145">
+            <mxGeometry x="-1" relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="5d5fca574e4e6079-147" value="0..n"
+                style="resizable=0;html=1;align=right;verticalAlign=top;labelBackgroundColor=#ffffff;fontSize=10;"
+                vertex="1" connectable="0" parent="5d5fca574e4e6079-145">
+            <mxGeometry x="1" relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="5d5fca574e4e6079-150" value="Relation"
+                style="endArrow=open;html=1;endSize=12;startArrow=diamondThin;startSize=14;startFill=0;edgeStyle=orthogonalEdgeStyle;fontColor=#003366;exitX=0;exitY=0.5;entryX=1;entryY=0.5;"
+                edge="1" parent="1" source="5d5fca574e4e6079-140" target="5d5fca574e4e6079-138">
+            <mxGeometry x="-0.0769" y="-15" relative="1" as="geometry">
+                <mxPoint x="230" y="185" as="sourcePoint"/>
+                <mxPoint x="390" y="185" as="targetPoint"/>
+                <Array as="points">
+                    <mxPoint x="140" y="-50"/>
+                    <mxPoint x="140" y="-50"/>
+                </Array>
+                <mxPoint as="offset"/>
+            </mxGeometry>
+        </mxCell>
+        <mxCell id="5d5fca574e4e6079-151" value="1"
+                style="resizable=0;html=1;align=left;verticalAlign=top;labelBackgroundColor=#ffffff;fontSize=10;"
+                vertex="1" connectable="0" parent="5d5fca574e4e6079-150">
+            <mxGeometry x="-1" relative="1" as="geometry">
+                <mxPoint x="-20" as="offset"/>
+            </mxGeometry>
+        </mxCell>
+        <mxCell id="5d5fca574e4e6079-152" value="1"
+                style="resizable=0;html=1;align=right;verticalAlign=top;labelBackgroundColor=#ffffff;fontSize=10;"
+                vertex="1" connectable="0" parent="5d5fca574e4e6079-150">
+            <mxGeometry x="1" relative="1" as="geometry">
+                <mxPoint x="20" as="offset"/>
+            </mxGeometry>
+        </mxCell>
+        <mxCell id="5d5fca574e4e6079-153" value="Relation"
+                style="endArrow=open;html=1;endSize=12;startArrow=diamondThin;startSize=14;startFill=0;edgeStyle=orthogonalEdgeStyle;fontColor=#003366;exitX=0.5;exitY=1;entryX=0.5;entryY=0;"
+                edge="1" parent="1" source="5d5fca574e4e6079-138" target="5d5fca574e4e6079-141">
+            <mxGeometry relative="1" as="geometry">
+                <mxPoint x="140" y="75" as="sourcePoint"/>
+                <mxPoint x="300" y="75" as="targetPoint"/>
+                <Array as="points">
+                    <mxPoint x="-10" y="55"/>
+                    <mxPoint x="-10" y="55"/>
+                </Array>
+            </mxGeometry>
+        </mxCell>
+        <mxCell id="5d5fca574e4e6079-154" value="1"
+                style="resizable=0;html=1;align=left;verticalAlign=top;labelBackgroundColor=#ffffff;fontSize=10;"
+                vertex="1" connectable="0" parent="5d5fca574e4e6079-153">
+            <mxGeometry x="-1" relative="1" as="geometry">
+                <mxPoint x="10" as="offset"/>
+            </mxGeometry>
+        </mxCell>
+        <mxCell id="5d5fca574e4e6079-155" value="0..n"
+                style="resizable=0;html=1;align=right;verticalAlign=top;labelBackgroundColor=#ffffff;fontSize=10;"
+                vertex="1" connectable="0" parent="5d5fca574e4e6079-153">
+            <mxGeometry x="1" relative="1" as="geometry">
+                <mxPoint x="40" y="-30" as="offset"/>
+            </mxGeometry>
+        </mxCell>
+    </root>
+</mxGraphModel>

@@ -1,0 +1,49 @@
+# ===================================
+#  List Column Definitions
+# ===================================
+
+columns:
+    category_id:
+        label: Kategorie
+        sortable: true
+        relation: category
+        select: name
+    user_id:
+        label: Přednášející
+        sortable: true
+        relation: user
+        select: name
+    type_id:
+        label: Typ
+        sortable: true
+        relation: type
+        select: name
+    name:
+        label: Název
+        type: text
+        searchable: true
+        sortable: true
+    date:
+        label: Datum
+        type: datetime
+        searchable: true
+        sortable: true
+        format: d.m.Y H:i:s
+    votes:
+        label: Hlasy
+        type: text
+        sortable: true
+    approved:
+        label: Schváleno
+        type: switch
+        sortable: true
+    created_at:
+        label: Vytvořeno
+        type: datetime
+        sortable: true
+        format: d.m.Y H:i:s
+    updated_at:
+        label: Upraveno
+        type: datetime
+        sortable: true
+        format: d.m.Y H:i:s

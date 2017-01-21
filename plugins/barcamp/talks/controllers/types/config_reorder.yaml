@@ -1,0 +1,5 @@
+title: Typ
+modelClass: Barcamp\Talks\Models\Type
+nameFrom: name
+toolbar:
+    buttons: reorder_toolbar
