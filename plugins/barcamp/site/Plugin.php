@@ -34,18 +34,6 @@ class Plugin extends PluginBase
     }
 
     /**
-     * Registers any front-end components implemented in this plugin.
-     *
-     * @return array
-     */
-    public function registerComponents()
-    {
-        return [
-            'Barcamp\Site\Components\RegistrationForm' => 'registrationForm',
-        ];
-    }
-
-    /**
      * Boot method, called right before the request route.
      *
      * @return array

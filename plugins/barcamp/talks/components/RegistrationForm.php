@@ -1,4 +1,4 @@
-<?php namespace Barcamp\Site\Components;
+<?php namespace Barcamp\Talks\Components;
 
 use Barcamp\Talks\Models\Category;
 use Cms\Classes\ComponentBase;
