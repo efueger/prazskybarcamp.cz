@@ -25,6 +25,9 @@ www.prazskybarcamp.cz
 2. Set Error Logger plugin at backend.
 3. Remove admin account and create own.
 4. Set mailing at Backend > Mail configuration.
+5. Set mail templates text at Backend > Mail templates
+    - **rainlab.user::mail.activate** is sent after registration
+    - **rainlab.user::mail.welcome** after successfull account confirmation
 
 ## Requirements
 
