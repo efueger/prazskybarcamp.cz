@@ -16,7 +16,7 @@ class Plugin extends PluginBase
                 'order' => 550,
                 'sideMenu' => [
                     'faqs' => [
-                        'label' => 'FAQs',
+                        'label' => 'FAQ',
                         'url' => Backend::url('vojtasvoboda/faq/faqs'),
                         'icon' => 'oc-icon-comments-o',
                         'permissions' => ['vojtasvoboda.faq.faqs'],

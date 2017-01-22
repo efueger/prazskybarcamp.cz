@@ -13,7 +13,6 @@ class CreateTalksTable extends Migration
             $table->increments('id');
 
             $table->integer('user_id')->unsigned()->nullable();
-            $table->foreign('user_id')->references('id')->on('users');
 
             $table->integer('category_id')->unsigned()->nullable();
             $table->foreign('category_id')->references('id')->on('barcamp_talks_categories');

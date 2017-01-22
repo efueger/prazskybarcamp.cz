@@ -3,6 +3,7 @@
 | Master  | Develop |
 | :------ | :------ |
 | [![StyleCI](https://styleci.io/repos/79055930/shield?branch=master)](https://styleci.io/repos/79055930) | [![StyleCI](https://styleci.io/repos/79055930/shield?branch=develop)](https://styleci.io/repos/79055930) |
+| [![Codacy](https://api.codacy.com/project/badge/Grade/0a91176118544eb4906475b275fa9ad9)](https://www.codacy.com/app/vojtasvoboda/prazskybarcamp-cz) | [![Codacy](https://api.codacy.com/project/badge/Grade/0a91176118544eb4906475b275fa9ad9)](https://www.codacy.com/app/vojtasvoboda/prazskybarcamp-cz) |
 
 www.prazskybarcamp.cz
 
@@ -25,6 +26,9 @@ www.prazskybarcamp.cz
 2. Set Error Logger plugin at backend.
 3. Remove admin account and create own.
 4. Set mailing at Backend > Mail configuration.
+5. Set mail templates text at Backend > Mail templates
+    - **rainlab.user::mail.activate** is sent after registration
+    - **rainlab.user::mail.welcome** after successfull account confirmation
 
 ## Requirements
 

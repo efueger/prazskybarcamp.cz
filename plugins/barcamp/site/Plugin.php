@@ -34,18 +34,6 @@ class Plugin extends PluginBase
     }
 
     /**
-     * Registers any front-end components implemented in this plugin.
-     *
-     * @return array
-     */
-    public function registerComponents()
-    {
-        return [
-            'Barcamp\Site\Components\RegistrationForm' => 'registrationForm',
-        ];
-    }
-
-    /**
      * Boot method, called right before the request route.
      *
      * @return array
@@ -55,6 +43,7 @@ class Plugin extends PluginBase
         $this->extendUserModel();
         $this->extendUsersController();
         $this->extendUsersListing();
+        $this->extendBackendMenus();
     }
 
     /**
@@ -77,6 +66,14 @@ class Plugin extends PluginBase
             $model->rules['link_linkedin'] = 'url';
             $model->rules['link_web'] = 'url';
             $model->rules['self_promo'] = 'max:1000';
+
+            // attribute names
+            $model->attributeNames['phone'] = 'Telefon';
+            $model->attributeNames['link_facebook'] = 'Odkaz na Facebook';
+            $model->attributeNames['link_twitter'] = 'Odkaz na Twitter';
+            $model->attributeNames['link_instagram'] = 'Odkaz na Instagram';
+            $model->attributeNames['link_linkedin'] = 'Odkaz na LinkedIn';
+            $model->attributeNames['link_web'] = 'Odkaz na Web';
         });
     }
 
@@ -128,11 +125,41 @@ class Plugin extends PluginBase
             // add new column
             $widget->addColumns([
                 'phone' => [
-                    'label' => 'barcamp.site::lang.user.phone',
-                    'sortable' => true,
+                    'label'      => 'barcamp.site::lang.user.phone',
+                    'sortable'   => true,
                     'searchable' => true,
                 ],
             ]);
+        });
+    }
+
+    /**
+     * Override backend menus.
+     */
+    private function extendBackendMenus()
+    {
+        Event::listen('backend.menu.extendItems', function ($manager)
+        {
+            // Add submenu to RainLab.User plugin
+            $manager->addSideMenuItems('RainLab.User', 'user', [
+                'users' => [
+                    'label'       => 'Uživatelé',
+                    'url'         => Backend::url('rainlab/user/users'),
+                    'icon'        => 'icon-user',
+                    'permissions' => ['rainlab.users.*'],
+                    'order'       => 500,
+                ],
+                'usergroups' => [
+                    'label'       => 'Skupiny',
+                    'url'         => Backend::url('rainlab/user/usergroups'),
+                    'icon'        => 'icon-users',
+                    'permissions' => ['rainlab.users.access_groups'],
+                    'order'       => 600,
+                ],
+            ]);
+
+            // Remove FAQ proposals submenu
+            $manager->removeSideMenuItem('VojtaSvoboda.Faq', 'faq', 'proposals');
         });
     }
 }
