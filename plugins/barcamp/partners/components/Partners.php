@@ -8,7 +8,6 @@ use Barcamp\Partners\Models\Partner;
 
 class Partners extends ComponentBase
 {
-
     public $all;
 
     public function componentDetails()
@@ -26,14 +25,11 @@ class Partners extends ComponentBase
 
     public function onRun()
     {
-
         $this->all = $this->page['all'] = $this->listCategories();
-
     }
 
     protected function listCategories()
     {
         return Category::isEnabled()->orderBy('sort_order', 'ASC')->get();
     }
-
 }
