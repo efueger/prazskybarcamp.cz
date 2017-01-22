@@ -1,0 +1,12 @@
+{% for category in __SELF__.all %}
+    <h4>{{ category.name }}</h4>
+
+    {% for partner in category.partner %}
+
+        <a href="{{ partner.url }}" title="{{ partner.name }}">
+            <img src="{{ partner.logo.path }}" alt="{{ partner.name }}" />
+        </a>
+
+    {% endfor %}
+
+{% endfor %}
