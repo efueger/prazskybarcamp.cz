@@ -17,14 +17,14 @@ class Plugin extends PluginBase
                 'permissions' => ['barcamp.partners.*'],
                 'order' => 550,
                 'sideMenu' => [
-                    'faqs' => [
+                    'partners' => [
                         'label' => 'Partneři',
                         'url' => Backend::url('barcamp/partners/partners'),
                         'icon' => 'icon-building-o',
                         'permissions' => ['barcamp.partners.*'],
                         'order' => 100,
                     ],
-                    'proposals' => [
+                    'categories' => [
                         'label' => 'Kategorie',
                         'url' => Backend::url('barcamp/partners/categories'),
                         'icon' => 'icon-folder',
