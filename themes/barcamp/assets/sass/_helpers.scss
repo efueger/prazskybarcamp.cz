@@ -1,0 +1,11 @@
+@mixin transition($time) {
+  -moz-transition-duration: $time;
+  -webkit-transition-duration: $time;
+  transition-duration: $time;
+}
+
+@mixin box-shadow($horizontal, $vertical, $blur, $spread, $color) {
+  -moz-box-shadow: $horizontal $vertical $blur $spread $color;
+  -webkit-box-shadow: $horizontal $vertical $blur $spread $color;
+  box-shadow: $horizontal $vertical $blur $spread $color;
+}
