@@ -9,7 +9,6 @@ use October\Rain\Database\Traits\Validation as ValidationTrait;
 
 class Category extends Model
 {
-
     use SoftDeleteTrait;
 
     use SortableTrait;
@@ -59,5 +58,4 @@ class Category extends Model
     {
         return $query->where('enabled', true);
     }
-
 }

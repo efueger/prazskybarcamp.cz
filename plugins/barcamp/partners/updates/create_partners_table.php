@@ -1,10 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: tomaskazatel
- * Date: 22.01.17
- * Time: 15:30
- */
 
 namespace Barcamp\Talks\Updates;
 
@@ -14,10 +8,9 @@ use October\Rain\Database\Updates\Migration;
 
 class CreatePartnersTable extends Migration
 {
-
     public function up()
     {
-        Schema::create('barcamp_partners_partners', function(Blueprint $table)
+        Schema::create('barcamp_partners_partners', function (Blueprint $table)
         {
             $table->engine = 'InnoDB';
             $table->increments('id')->unsigned();
@@ -35,9 +28,9 @@ class CreatePartnersTable extends Migration
             $table->softDeletes();
         });
     }
+
     public function down()
     {
         Schema::dropIfExists('barcamp_partners_partners');
     }
-
 }

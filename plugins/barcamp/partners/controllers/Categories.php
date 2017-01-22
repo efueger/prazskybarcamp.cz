@@ -7,7 +7,6 @@ use Backend\Classes\Controller;
 
 class Categories extends Controller
 {
-
     public $implement = [
         'Backend\Behaviors\FormController',
         'Backend\Behaviors\ListController',
@@ -30,5 +29,4 @@ class Categories extends Controller
 
         BackendMenu::setContext('Barcamp.Partners', 'partners', 'categories');
     }
-
 }

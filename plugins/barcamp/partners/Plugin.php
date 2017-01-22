@@ -7,7 +7,6 @@ use System\Classes\PluginBase;
 
 class Plugin extends PluginBase
 {
-
     public function registerNavigation()
     {
         return [
@@ -43,5 +42,4 @@ class Plugin extends PluginBase
             'Barcamp\Partners\Components\Partners' => 'partners',
         ];
     }
-
 }
