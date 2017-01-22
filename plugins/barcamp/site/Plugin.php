@@ -125,8 +125,8 @@ class Plugin extends PluginBase
             // add new column
             $widget->addColumns([
                 'phone' => [
-                    'label' => 'barcamp.site::lang.user.phone',
-                    'sortable' => true,
+                    'label'      => 'barcamp.site::lang.user.phone',
+                    'sortable'   => true,
                     'searchable' => true,
                 ],
             ]);
@@ -138,7 +138,7 @@ class Plugin extends PluginBase
      */
     private function extendBackendMenus()
     {
-        Event::listen('backend.menu.extendItems', function($manager)
+        Event::listen('backend.menu.extendItems', function ($manager)
         {
             // Add submenu to RainLab.User plugin
             $manager->addSideMenuItems('RainLab.User', 'user', [
