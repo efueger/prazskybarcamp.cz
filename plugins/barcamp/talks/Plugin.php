@@ -22,6 +22,7 @@ class Plugin extends PluginBase
     public function registerComponents()
     {
         return [
+            'Barcamp\Talks\Components\RegistrationForm' => 'registrationForm',
             // 'Barcamp\Talks\Components\MyComponent' => 'myComponent',
         ];
     }
